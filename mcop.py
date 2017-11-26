@@ -2,7 +2,8 @@ import os
 files_removed = 0
 directory = input("Directory to clear players: ")
 for filename in os.listdir(directory):
-    file = open(filename, "r")
+    fullPath = directory + '/' + filename
+    file = open(fullPath, "r")
     line = 18
     while(line < 42):
         test = file.read(i)
@@ -14,7 +15,7 @@ for filename in os.listdir(directory):
         file.close()
         if line == 43:
             print("Player", file, "deleted")
-            os.remove(filename)
+            os.remove(fullPath)
             files_removed += 1
 
             break
