@@ -1,6 +1,11 @@
+import argparse
 import os
 files_removed = 0
-directory = input("Directory to clear players: ")
+i = 0
+parser = argparse.ArgumentParser()
+parser.add_argument("path")
+args = parser.parse_args()
+directory = args.path
 for filename in os.listdir(directory):
     fullPath = directory + '/' + filename
     file = open(fullPath, "r")
