@@ -3,14 +3,15 @@ import os
 files_removed = 0
 i = 0
 parser = argparse.ArgumentParser()
-parser.add_argument("path")
+parser.add_argument("path", help="File path for players folder)
+parser.add_argument("initial_items", type=int, help="Number of inventory slots to be igonred, as in initial items")
 args = parser.parse_args()
 directory = args.path
+initialItems = args.initial_items
 for filename in os.listdir(directory):
     fullPath = directory + '/' + filename
     file = open(fullPath, "r")
-    line = 18
-    while(line < 42):
+    while(1):
         test = file.read(i)
         if test == "Empty":
             i += 1
@@ -18,7 +19,7 @@ for filename in os.listdir(directory):
             print("Player", file, "not cleared")
 
         file.close()
-        if line == 43:
+        if i == 43:
             print("Player", file, "deleted")
             os.remove(fullPath)
             files_removed += 1
