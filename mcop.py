@@ -3,7 +3,7 @@ import os
 files_removed = 0
 i = 0
 parser = argparse.ArgumentParser()
-parser.add_argument("path", help="File path for players folder)
+parser.add_argument("path", help="File path for players folder")
 parser.add_argument("initial_items", type=int, help="Number of inventory slots to be igonred, as in initial items")
 args = parser.parse_args()
 directory = args.path
