@@ -2,6 +2,9 @@
 (Currently unstable)
 Python script to clear unused Minetest players, reducing lag
 
+# Dependencies
+argparse
+
 # How to use current version (were it to work)
 
 Run mcop.py with "python mcop.py path initial_items" where path is the players directory of your Minetest world, such as 
