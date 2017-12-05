@@ -3,6 +3,7 @@
 Python script to clear unused Minetest players, reducing lag
 
 # Dependencies
+Python 3+
 argparse
 
 # How to use current version (were it to work)
